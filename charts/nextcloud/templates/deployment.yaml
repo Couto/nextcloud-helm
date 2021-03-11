@@ -359,7 +359,8 @@ spec:
       {{- else if .Values.postgresql.enabled }}
       initContainers:
       - name: postgresql-isready
-        image: bitnami/postgresql
+        image: postgresql
+        tag: 13.2-alpine
         env:
           - name: POSTGRES_USER
             valueFrom:
