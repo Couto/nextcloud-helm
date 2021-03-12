@@ -359,7 +359,7 @@ spec:
       {{- else if .Values.postgresql.enabled }}
       initContainers:
       - name: postgresql-isready
-        image: postgresql:13.2-alpine
+        image: postgresql
         env:
           - name: POSTGRES_USER
             valueFrom:
